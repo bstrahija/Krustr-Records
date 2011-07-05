@@ -635,6 +635,7 @@ class Assets {
 	{
 		// Set the assets base path
 		self::$base_path = reduce_double_slashes(realpath(self::$assets_dir));
+		dump( self::$assets_dir );
 		
 		// Now set the assets base URL
 		self::$base_url = reduce_double_slashes(config_item('base_url').'/'.self::$assets_dir);
@@ -643,6 +644,8 @@ class Assets {
 		self::$js_path 		= reduce_double_slashes(self::$base_path .'/'.self::$js_dir);
 		self::$css_path 	= reduce_double_slashes(self::$base_path .'/'.self::$css_dir);
 		self::$cache_path 	= reduce_double_slashes(self::$base_path .'/'.self::$cache_dir);
+		
+		dump(self::$js_path);
 		
 		// URL's
 		self::$js_url 		= reduce_double_slashes(self::$base_url  .'/'.self::$js_dir);
