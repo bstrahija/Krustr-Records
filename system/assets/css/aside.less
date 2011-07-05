@@ -1,0 +1,150 @@
+/* --------------------------------------------
+
+aside.css
+
+Project:	 Krustr
+Author:	     Boris Strahija
+URL:		 http://creolab.hr
+Copyright:   Boris Strahija, Creo
+	
+----------------------------------------------- */
+
+
+
+/* @group Aside
+----------------------------------------------- */
+	
+.sidebar       { float: left; width: 160px; padding: 35px 0 0 0; }
+.sidebar.ontop { padding-top: 2px; }
+.sidebar.alt   { float: right; width: 180px; }
+	
+	/* Widgets */
+	.widget                         { .light-noise(); .border-radius(0 8px 8px 0); border: 1px solid rgba(50,50,50,.2); padding: 15px 15px; margin: 0 0 25px -29px; position: relative; z-index: 2; .box-shadow(0 0 5px rgba(0,0,0,.1)); }
+	.sidebar.default .widget:after  { content: "."; position: absolute; .rotate(90deg); bottom: -9px; left: 0; z-index: 1; background: url(../images/bg/widget_corner.png) no-repeat; width: 8px; height: 8px; text-indent: -9999em; overflow: hidden; opacity: .5; }
+	.widget h2                      { font-size: 13px; color: #eee; margin: -16px -16px 15px -16px; .box-shadow(0 1px 0 rgba(0,0,0,.3)); .border-radius(0 8px 0 0); background: #444; border-bottom: 1px solid #ccc; font-family: "Helvetica Neue", Helvetica, Arial; font-weight: bold; padding: 6px 0 7px 15px; line-height: 120%; text-shadow: 0 -1px 0 rgba(0,0,0,.9); }
+	.widget h2 .picto               { font-size: 14px; font-weight: normal; margin: -2px 2px 0 0; }
+	.sidebar .widget .selector      { width: 150px !important; overflow: hidden; }
+	.sidebar .widget .selector span { width: 124px; }
+	.widget .btns input,
+	.widget .btns .btn              { .box-shadow(0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 1px 1px 0 rgba(0, 0, 0, 0.1)) }
+	
+	/* On the right side */
+	.sidebar.alt .widget                { .light-noise(); margin-left: 0; margin-right: -29px; .border-radius(8px 0 0 8px); }
+	.sidebar.alt .widget:after          { content: "."; position: absolute; .rotate(0deg); bottom: -9px; right: 0; z-index: 1; background: url(../images/bg/widget_corner.png) no-repeat; width: 8px; height: 8px; text-indent: -9999em; overflow: hidden; opacity: .5; }
+	.sidebar.alt .widget h2             { .border-radius(8px 0 0 0); background: #444; border-bottom: 1px solid #ccc; font-family: "Helvetica Neue", Helvetica, Arial; font-weight: bold; padding: 6px 0 7px 15px; line-height: 120%; text-shadow: 0 -1px 0 rgba(0,0,0,.9); }
+	.sidebar.alt .widget .selector      { width: 170px !important; overflow: hidden; }
+	.sidebar.alt .widget .selector span { width: 140px; }
+	
+	/* Publisher */
+	.widget.publisher {
+	    background-image:
+	        -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.1)), to(rgba(0,0,0,.3))),
+	        url(../images/noise_gray.png);
+	    
+	    background-image:
+	        -moz-linear-gradient(0% 0% -90deg, rgba(0,0,0,.1), rgba(0,0,0,.3)),
+	        url(../images/noise_gray.png);
+	    
+	    background-color: #333;
+	}
+	
+	/* Publisher continued */
+	.sidebar .widget.publisher h2       { border-bottom: 1px solid #aaa; }
+	.widget.publisher ul                { margin: 0; padding: 0; font-size: 11px; color: #eee; list-style-type: none; text-shadow: 0 -1px 0 rgba(0,0,0,.3); }
+	.widget.publisher li                { padding: 5px 0; border-top: 1px solid #888; border-bottom: 1px solid #505050; line-height: 135%; }
+	.widget.publisher li:first-child    { border-top: none; }
+	.widget.publisher li:last-child     { border-bottom: none; }
+	.widget.publisher li:after          { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+	.widget.publisher li span           { float: left; width: 66px; }
+	.widget.publisher li strong         { margin-left: 66px; display: block; }
+	.widget.publisher li a.toggle       { float: right; font-size: 9px; color: #D0ECEF; text-decoration: none; background: #444; padding:0 4px; .border-radius(2px); .box-shadow(inset 0 1px 1px rgba(0,0,0,.4)); }
+	.widget.publisher li a.toggle:hover { color: #fff; }
+	.widget.publisher .btns             { border: none; padding: 10px 0 0 0; }
+	.widget.publisher .btns:after       { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+	.widget.publisher .btns input       { .box-shadow(0 0 2px rgba(255,255,255,.3)) }
+	.widget.publisher .btn em           { text-transform: none; font-weight: normal; text-shadow: 0 1px 0 #000; }
+	.widget.publisher .btns-publish     { padding: 0; margin: -10px 0 0 0; }
+	
+	
+	/* Revision */
+	.widget.revisions .btns           { padding: 10px 0 2px 0; }
+	.widget.revisions .btns:after     { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+	.widget.revisions .btn            { float: left; font-size: 11px; padding: 4px 0; text-shadow: 0 1px 0 #000; width: 70px; text-align: center; margin: 0; }
+	.widget.revisions .btn em         { text-transform: none; font-weight: normal; }
+	.widget.revisions .btns a.preview { float: left; }
+	.widget.revisions .btns a.revert  { float: right; }
+
+	
+	/* Button list */
+	.widget .buttons                { list-style-type: none; margin: 0; padding: 0; }
+	.widget .buttons li             { margin: 3px 0;}
+	.widget .buttons a              { display: block; padding: 5px 6px; .border-radius(4px); .box-shadow(inset 1px 1px 2px rgba(0,0,0,.2)); background: #626262; font-size: 11px; text-decoration: none; color: #eee; font-weight: bold; text-shadow: 0 -1px 0 rgba(0,0,0,.3); }
+	.widget .buttons a .indicate    { display: none; }
+	.widget .buttons a:hover        { color: #fff; background: #444; -webkit-transition: all .2s ease-in-out; }
+	.widget .buttons a.on           { display: block; background: #303030; .box-shadow(none); }
+	.widget .buttons a.on .indicate { display: inline; float: right; }
+	
+	
+	/* Check boxes (categories) */
+	.widget .checks       { margin: 0; padding: 0; list-style-type: none; font-size: 12px; }
+	.widget .checks li    { margin: 0 0 4px 0; }
+	.widget .checks label { position: relative; top: 3px; }
+	.widget .checks em    { font-size: 10px; position: relative; top: 1px; padding: 0 0 0 2px; color: #aaa; }
+	
+	
+	/* Publisher */
+	.widget.publisher dl       { margin: 0 0 6px 0; font-size: 11px; color: #333; }
+	.widget.publisher dl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+	.widget.publisher dt       { float: left; clear: both; padding: 2px 0; margin-right: 2px; width: 54px; overflow: hidden; }
+	.widget.publisher dd       { font-weight: bold; float: right; padding: 2px 0; width: 115px; }
+	.widget.publisher dd .act  { margin-left: 6px; text-decoration: none; }
+	#scene .widget.publisher input.datepicker { font-size: 11px !important; background-position: 100% -5px; font-family: Helvetica, Arial;
+		.border-radius(3px); border: 1px solid #b0b0b0; margin: 0 0 5px 0; width: 164px;
+	}
+	#scene .widget.publisher input.timepicker { font-size: 11px !important; font-family: Helvetica, Arial; border: 1px solid #b0b0b0; width: 164px }
+		
+		
+		/* Publish status */
+		.sidebar .widget .publish-status .selector      { width: 156px !important; overflow: hidden; }
+		.sidebar .widget .publish-status .selector span { width: 129px; }
+
+		
+		
+		/* Sliding elements */
+		.widget.publisher .slide       { clear: both; float: none; width: 172px; margin: 4px 0 10px -64px; padding: 6px 0 6px 8px; display: none; border: 1px dotted #ddd; .border-radius(3px); background: #eee; }
+		.widget.publisher .slide input { font-size: 11px; }
+		
+	
+		/* Buttons */
+		.widget.publisher .btn                   { padding: 4px 0; font-size: 11px; float: left; margin: 0 0 10px 0; text-shadow: 0 1px 0 rgba(0,0,0,.5); width: 70px;
+			box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 1px 1px 0 rgba(0, 0, 0, 0.1); text-align: center;
+		}
+		.widget.publisher .btn-publish .picto    { text-transform: none; font-size: 220% !important; margin-right: 2px; position: relative; top: 1px; line-height: 10px; }
+		
+			/* Publish */
+			.widget.publisher .btn-publish       { .gradient(#3E789E; #4083A9);  font-size: 14px; clear: both; float: none;  border: 1px solid rgba(0, 0, 128, 0.1);
+				color: #fff; width: 100%; padding: 8px 0; display: block; text-align: center; margin: 6px 0 0 0; text-shadow: 0 1px 0 rgba(0,0,0,.5);
+				
+			}
+			.widget.publisher .btn-publish:hover { .gradient(#4083A9; #3E789E); }
+			
+			/* Save */
+			.widget.publisher hr           { clear: both; margin: 10px 0; }
+			.widget.publisher .btn-save    { float: left; }
+			.widget.publisher .btn-cancel  { float: right; }
+			.widget.publisher .btn-preview { float: right; }
+
+
+
+	
+/* @end */
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+@font-face {
+	font-family: 'WebPicto';
+	src: url('../fonts/pictos-webfont.eot');
+    src: url('../fonts/pictos-webfont.eot?iefix') format('eot'),
+         url('../fonts/pictos-webfont.woff') format('woff'),
+         url('../fonts/pictos-webfont.ttf') format('truetype'),
+         url('../fonts/pictos-webfont.svg#webfontMVJeglKn') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.picto, .mainc label.required em { color: inherit; font-family: "WebPicto" !important; font-style: normal; font-size: 120%; line-height: 70%; font-weight: 100 !important; position: relative; top: -1px; }
+
+
+a.picto:hover {
+	color:inherit;
+}
+
+.picto.home:after { content: 'H'; }
+.picto.star:after { content: "S"; }
+.picto.heart:after { content: 'k'; }
+.picto.cog:after { content: "y"; }
+.picto.plus:after { content: "&"; }
+.picto.plus-alt:after { content: "+"; }
+.picto.article:after { content: "N"; }
+.picto.pencil:after { content: "p"; }
+.picto.trash:after { content: "#"; }
+.picto.map-pin:after { content: '@'; }
+.picto.clock:before { content: "t"; }
+.picto.layout:after { content: "j"; }
+.picto.cart:after { content: "$"; }
+.picto.tag:after { content: "z"; }
+.picto.draft:after { content: "W"; }
+.picto.cloud:after { content: "C"; }
+.picto.lens:after { content: "L"; }
+.picto.remove:after { content: "D"; }
+.picto.mail:after { content: "M"; }
+.picto.folder:after { content: "o"; }
+.picto.new:after { content: "N"; }
+.picto.tools:after { content: "x"; }
+.picto.move:after { content: "`"; }
+.picto.list:after { content: "l"; }
+.picto.user:after { content: "U"; }
+.picto.users:after { content: "g"; }
+.picto.locked:after, .picto.lock:after { content: "("; }
+.picto.page:after { content: "F"; }
+.picto.publish:after { content: "c"; }
+.picto.inbox:after { content: "I"; }
+.picto.cal:after { content: "\ "; }
+.picto.globe:after { content: "G"; }
+.picto.eye:after { content: "E"; }
+.picto.gauge:after { content: ","; }
+.picto.switch:after { content: "u"; }
+.picto.off:after { content: "Q"; }
+.picto.music:after { content: "m"; }
+.picto.photo:after, .picto.photos:after { content: "P"; }
+.picto.upload:after { content: "c"; }
+.picto.briefcase:after, .picto.company:after { content: "O"; }
+.picto.email:after { content: "M"; }
+.picto.url:after { content: "G"; }
+.picto.cart:after { content: "$"; }
+.picto.sync:after { content: "R"; }
+
+.picto.image:after { content: "v"; }
+.picto.gallery:after { content: "P"; }
+.picto.text:after { content: "F"; }
+.picto.textarea:after { content: "N"; }
+.picto.video:after { content: "V"; }
+.picto.relation:after { content: "A"; }
+.picto.number:after { content: ","; }
+.picto.stats:after { content: "Y"; }
+.picto.stats-alt:after, .picto.chart:after { content: "Z"; }
+.picto.back:after { content: "["; }
+.picto.comment:after { content: "w"; }
+.picto.comments:after { content: "q"; }
+.picto.write:after { content: "W"; }
+.picto.pipe:after { content: "|"; }
+.picto.sep:after { content: "."; }
+
+.picto.notice:after { content: "i"; }
+.picto.error:after { content: "*"; }
+.picto.warning:after { content: "!"; }
+.picto.alert:after { content: "!"; }
+.picto.success:after { content: "2"; }
+
+.picto.map:after { content: "G"; }

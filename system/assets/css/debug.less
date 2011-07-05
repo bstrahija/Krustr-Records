@@ -1,0 +1,53 @@
+/* --------------------------------------------
+
+header_footer.css
+
+Project:	 Krustr
+Author:	     Boris Strahija
+URL:		 http://creolab.hr
+Copyright:   Boris Strahija, Creo
+	
+----------------------------------------------- */
+
+
+
+/* @group Debug
+----------------------------------------------- */
+
+#exception_error    { position: relative; z-index: 999; top: 0; }
+#exception_error h1 { display: block; visibility: visible; text-indent: 0; }
+
+pre { border: 1px solid #bbb; background: rgba(255,255,255,.6); padding: 10px 15px; color: #444; font-size: 11px; width: 95%; margin: 0 auto; overflow: auto; white-space: pre;
+	-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+}
+
+
+/* View data debug */
+.view-data         { display: none; clear: both; width: 980px; margin: 44px auto 0 auto; overflow: auto; background: rgba(255,255,255,.9); border: 1px solid #ccc; padding: 8px; font-size: 11px; color: #333;  .border-radius(5px); .box-shadow(0 2px 8px rgba(0,0,0,.2)); }
+.view-data .toggle {  }
+.view-data .cont   { display: none; padding: 15px; }
+.view-data h4      { margin: 0 0 12px 0; font-size: 14px; }
+
+
+/* Codeigniter Profiler */
+#codeigniter_profiler          { display: none; width: 980px; margin: 44px auto 0 auto; overflow: auto; border: 1px solid #ccc; border-top: none; position: relative; left: 4px; .border-radius(5px); .box-shadow(0 2px 8px rgba(0,0,0,.2)); }
+#codeigniter_profiler fieldset { font-size: 12px; }
+#codeigniter_profiler table    { border-spacing: 3px; width: 938px; }
+#codeigniter_profiler table td { padding: 1px 3px; }
+#codeigniter_profiler code     { font-family: "Courier New"; font-size: 11px; line-height: 14px; }
+
+
+aside .debug                         { position: absolute; width: 90%; bottom: -55px; left: 0; text-align: center; font-size: 10px; color: #222; text-shadow: 0 1px 0 rgba(255,255,255,.2); line-height: 150%; }
+aside .debug a                       { color: #222; text-decoration: none; font-weight: bold; }
+aside .debug a.debug-profiler-toggle { font-size: 13px; }
+aside .debug a.debug-data-toggle     { font-size: 13px; }
+
+
+/* Debug info and toggle */
+footer.debug         { position: fixed; bottom: 0; right: 12px; z-index: 10; padding: 3px 7px; font-size: 8px; color: #eee; text-shadow: 0 1px 0 #000; background: #333; .border-radius(4px 4px 0 0); letter-spacing: .2em; font-family: Tahoma; }
+footer.debug a       { color: #fff; text-decoration: none; }
+footer.debug a:hover { color: #84C2D0; }
+
+
+
+/* @end */

@@ -1,0 +1,12 @@
+body.wysiwyg { font-family: Helvetica, Arial, sans-serif; font-size: 75%; color: #555; line-height: 140%; }
+body.wysiwyg code { border: 1px solid #ccc; padding: 10px; display: block; background: #eee; margin-bottom: 16px; color: #444; max-width: 90%; overflow: auto; }
+body.wysiwyg code:before { content: "CODE:"; font-size: 9px; display: block; margin: -10px -10px 10px -10px; padding: 3px 5px; color: #666; background: #91c5d4; border-bottom: 1px solid #6ca8b8; font-family: Helvetica; font-weight: bold; }
+body.wysiwyg a { color: #4a8697 }
+body.wysiwyg a:hover { color: #286475 }
+body.wysiwyg strong { color: #444; }
+body.wysiwyg li { margin-bottom: 5px; }
+
+
+
+
+

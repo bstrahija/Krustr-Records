@@ -1,0 +1,127 @@
+/* --------------------------------------------
+
+forms.css
+
+Project:	 Krustr
+Author:	     Boris Strahija
+URL:		 http://creolab.hr
+Copyright:   Boris Strahija, Creo
+	
+----------------------------------------------- */
+
+
+
+/* @group Global
+----------------------------------------------- */
+
+body { background: #d8d8d8 url(../images/bg/white_sand.gif); font-family: "Helvetica Neue", Helvetica, Arial; text-shadow: 0 1px 0 #fff; padding: 45px 0 0 0; }
+
+
+/* !Layout */
+#layout           { width: 100%; min-width: 960px; overflow: hidden; padding: 0; position: relative; z-index: 1; margin: 0; }
+#scene            { min-height: 400px; padding-bottom: 30px; }
+.mainc            { min-width: 960px; background: #f6f6f6 url(../images/bg/linen_white_texture.jpg); padding: 20px 20px 20px 20px; .border-radius(9px); margin: 10px 35px 10px 35px; .box-shadow(0 0 5px #ccc); position: relative; }
+.mainc:last-child { margin: 10px 35px 0 35px; padding-bottom: 40px; }
+.mainsingle       { min-height: 500px; }
+.chart            { overflow: hidden; margin: -10px 0 20px 0 ; }
+#page-loader      { display: none; background: #d8d8d8 url(../images/bg/body.png); text-align: center; padding: 200px 0; font-size: 32px; color: #666; font-family: "Helvetica Neue", Helvetica, Arial; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100; }
+#page-loader p    { /*display: none;*/ }
+
+
+/* When no entries are found */
+p.nothing-found        { font-size: 22px; font-weight: bold; text-align: center; color: #666; padding: 80px 20px; .gradient(#dbdbd; #e6e6e6); border: 1px solid #ccc; .box-shadow(0 1px 2px #bbb); .border-radius(5px); position: relative; top: 8px; margin: 0; text-shadow: 0 1px 0 #f2f2f2; }
+p.nothing-found .picto { margin-right: 4px; }
+
+
+/* !Block */
+.block            { min-height: 400px; }
+.block.no-min     { min-height: 1px !important; }
+.block:after      { content: "."; display: block; height: 0; clear: both; visibility: hidden; position: relative; }
+.wside .block     { margin-left: 180px; }
+.wside2 .block    { margin-right: 200px; }
+	.block header         { margin: 0; }
+	.block h1             { float: none; color: #3f3f3f; font-size: 22px; font-weight: bold; margin: 0 0 16px 0; font-family: "Helvetica Neue", Helvetica, Arial; }
+	.block h1:first-child { margin-top: -8px; }
+	.block h1 .picto,
+	.block h2 .picto,
+	.block h3 .picto      { position: relative; top: -2px; margin: 0 2px 0 0; }
+	.block h2             { font-size: 18px; margin: 0 0 15px; border-bottom: 1px dotted #aaa; padding-bottom: 5px; }
+	.block h3             { font-size: 16px; margin: 0 0 15px; }
+	.block h4             { font-size: 14px; margin: 0 0 15px; }
+	.block h5             { font-size: 12px; margin: 0 0 15px; }
+
+
+/* @end */
+
+
+
+/* @group Content */
+
+/* Page navigation */
+.pages-advanced       { position: relative; }
+.pages-advanced:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.page-navigation      { float: left; list-style-type: none; margin: 0; padding: 0; width: 60%; }
+	
+	.page-navigation ul             { list-style-type: none; margin: 0 0 14px 22px; padding: 0; }
+	.page-navigation div.item       { background: #d6d6d6; padding: 6px 10px; margin: 0 0 8px 0; text-shadow: 0 1px 1px #fff; position: relative; border: 1px solid #eee;
+		.border-radius(5px); .gradient(#ddd; #d1d1d1);
+	}
+	.page-navigation div.item:hover  { border-color: #bbb; .border-radius(5px); .gradient(#ccc; #c1c1c1); }
+	.page-navigation a.title         { font-size: 13px; color: #666; font-weight: bold; text-decoration: none; margin-left: 13px; }
+	.page-navigation a.title i       { font-size: 85%; font-family: Palatino, Georgia, serif; font-style: italic; }
+	.page-navigation a.title:hover   { color: #555; }
+	.page-navigation .handle         { text-indent: -9999em; position: absolute; top: 3px; left: 5px; width: 16px; height: 22px; background: url(../images/icn_sort.png) no-repeat 50% 50%; margin-right: 6px; opacity: .3; cursor: move; }
+	.page-navigation .handle:hover   { opacity: .7; }
+	.page-navigation div.item .picto { margin-right: 6px; }
+	
+	/* Item status */
+	.page-navigation div.item.draft              { opacity: .7; }
+	.page-navigation div.item.draft .picto.s     { color: #607890; }
+	.page-navigation div.item.published .picto.s { color: #7b873a; text-shadow: 0 1px #fff, 0 0 6px #8c9943; }
+	.page-navigation div.item.trashed            { opacity: .5; }
+	.page-navigation div.item.trashed .picto.s   { color: #c00; text-shadow: 0 1px #fff, 0 0 2px #d00; }
+	
+	/* These are shown on hover */
+	.page-navigation .hact          { display: none; }
+	.page-navigation .item:hover .hact,
+	.page-navigation .item.on .hact { display: block; }
+	
+	/* Actions */
+	.page-navigation .actions                { position: absolute; top: 6px; right: 12px; }
+	.page-navigation .actions a              { font-size: 11px; color: #777; text-decoration: none; margin: 0 8px; text-shadow: 0 1px 1px #fff; }
+	.page-navigation .actions a:hover        { color: #333; }
+	.page-navigation .actions a.delete:hover { color: #600; }
+	
+	/* Selected item */
+	.page-navigation div.item.on                         { border-color: #aaa; .border-radius(5px); .gradient(#bbb; #b1b1b1); text-shadow: 0 1px 1px #eee; color: #444; }
+	.page-navigation div.item.on .actions a              { color: #444; }
+	.page-navigation div.item.on .actions a:hover        { color: #000; }
+	.page-navigation div.item.on .actions a.delete:hover { color: #900; }
+
+
+/* Page info */
+.page-info       { float: right; width: 38%; }
+.page-info h3    { color: #eee; text-shadow: 0 1px 0 #222; padding: 10px; font-size: 14px; margin: 0;  border: 1px solid #4b4b4b; .border-radius(5px 5px 0 0); .dark-noise(); }
+.page-info .col  { margin: 0; float: none; width: auto; padding: 10px; list-style-type: none; border: 1px solid #ccc; background: #f6f6f6; .box-shadow(1px 1px 3px rgba(0,0,0,.1)); .border-radius(0 0 5px 5px); }
+.page-info h4    { font-size: 13px; font-weight: bold; border-bottom: 1px dotted #ccc; margin: 0 0 5px 0; padding: 0 0 5px 0; }
+.page-info dl    { color: #333; margin: 0 0 15px 0; font-size: 11px; width: 100%; overflow: hidden; }
+.page-info dt    { display: block; font-weight: bold; float: left; width: 110px; padding: 2px 0; clear: both; }
+.page-info dd    { display: block; padding: 0 0 0 10px; float: left; width: 200px; padding: 2px 0 4px 0; }
+.page-info .btns { margin: 5px 0; }
+.page-info .btn  { margin: 0 5px 0 0; color: #eee; text-shadow: 0 1px 0 rgba(0,0,0,.5); }
+
+/* @end */
+
+
+
+
+/* @group Modules */
+
+.modules .grid { margin: 0; }
+
+/* @end */
+
+
+
+
+

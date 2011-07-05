@@ -1,0 +1,479 @@
+/*
+
+Uniform Theme: Agent
+Version: 1.0
+By: Collin Allen
+License: Creative Commons Share Alike
+---
+For use with the Uniform plugin:
+http://pixelmatrixdesign.com/uniform/
+
+*/
+
+/* Global Declaration */
+
+.uniform-agent div.selector, 
+.uniform-agent div.selector span,
+.uniform-agent div.checker span,
+.uniform-agent div.radio span,
+.uniform-agent div.uploader,
+.uniform-agent div.uploader span.action {
+  background-image: url(../images/libs/uniform/sprite-agent.png);
+  background-repeat: no-repeat;
+}
+
+.uniform-agent .selector, 
+.uniform-agent .radio, 
+.uniform-agent .checker, 
+.uniform-agent .uploader, 
+.uniform-agent .selector *, 
+.uniform-agent .radio *, 
+.uniform-agent .checker *, 
+.uniform-agent .uploader *{
+	margin: 0;
+	padding: 0;
+  display: -moz-inline-box;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+}
+
+/* SPRITES */
+
+/* Select */
+
+.uniform-agent div.selector {
+  background-position: -483px -160px;
+  line-height: 32px;
+	height: 32px;
+}
+
+.uniform-agent div.selector span {
+  background-position: right 0px;
+  height: 32px;
+	line-height: 32px;
+}
+
+.uniform-agent div.selector select {
+  /* change these to adjust positioning of select element */
+  top: 0px;
+	left: 0px;
+	height: 32px;
+}
+
+.uniform-agent div.selector:active, 
+.uniform-agent div.selector.active {
+	background-position: -483px -192px;
+}
+
+.uniform-agent div.selector:active span, 
+.uniform-agent div.selector.active span {
+	background-position: right -32px;
+}
+
+.uniform-agent div.selector.focus, 
+.uniform-agent div.selector.hover, 
+.uniform-agent div.selector:hover {
+	background-position: -483px -224px;
+}
+
+.uniform-agent div.selector.focus span, 
+.uniform-agent div.selector.hover span, 
+.uniform-agent div.selector:hover span {
+	background-position: right -64px;
+}
+
+.uniform-agent div.selector.focus:active,
+.uniform-agent div.selector.focus.active,
+.uniform-agent div.selector:hover:active,
+.uniform-agent div.selector.active:hover {
+	background-position: -483px -256px;
+}
+
+.uniform-agent div.selector.focus:active span,
+.uniform-agent div.selector:hover:active span,
+.uniform-agent div.selector.active:hover span,
+.uniform-agent div.selector.focus.active span {
+	background-position: right -96px;
+}
+
+.uniform-agent div.selector.disabled,
+.uniform-agent div.selector.disabled:active,
+.uniform-agent div.selector.disabled.active {
+	background-position: -483px -288px;
+}
+
+.uniform-agent div.selector.disabled span,
+.uniform-agent div.selector.disabled:active span,
+.uniform-agent div.selector.disabled.active span {
+  background-position: right -128px;
+}
+
+/* Checkbox */
+
+.uniform-agent div.checker {
+  width: 23px;
+  height: 23px;
+}
+
+.uniform-agent div.checker input {
+  width: 23px;
+  height: 23px;
+}
+
+.uniform-agent div.checker span {
+  background-position: 0px -320px;
+  height: 23px;
+  width: 23px;
+}
+
+.uniform-agent div.checker:active span, 
+.uniform-agent div.checker.active span {
+	background-position: -23px -320px;
+}
+
+.uniform-agent div.checker.focus span,
+.uniform-agent div.checker:hover span {
+	background-position: -46px -320px;
+}
+
+.uniform-agent div.checker.focus:active span,
+.uniform-agent div.checker:active:hover span,
+.uniform-agent div.checker.active:hover span,
+.uniform-agent div.checker.focus.active span {
+	background-position: -69px -320px;
+}
+
+.uniform-agent div.checker span.checked {
+	background-position: -92px -320px;
+}
+
+.uniform-agent div.checker:active span.checked, 
+.uniform-agent div.checker.active span.checked {
+	background-position: -115px -320px;
+}
+
+.uniform-agent div.checker.focus span.checked,
+.uniform-agent div.checker:hover span.checked {
+	background-position: -138px -320px;
+}
+
+.uniform-agent div.checker.focus:active span.checked,
+.uniform-agent div.checker:hover:active span.checked,
+.uniform-agent div.checker.active:hover span.checked,
+.uniform-agent div.checker.active.focus span.checked {
+	background-position: -161px -320px;
+}
+
+.uniform-agent div.checker.disabled span,
+.uniform-agent div.checker.disabled:active span,
+.uniform-agent div.checker.disabled.active span {
+	background-position: -184px -320px;
+}
+
+.uniform-agent div.checker.disabled span.checked,
+.uniform-agent div.checker.disabled:active span.checked,
+.uniform-agent div.checker.disabled.active span.checked {
+	background-position: -207px -320px;
+}
+
+/* radio */
+
+.uniform-agent div.radio {
+  width: 23px;
+  height: 23px;
+}
+
+.uniform-agent div.radio input {
+  width: 23px;
+  height: 23px;
+}
+
+.uniform-agent div.radio span {
+  height: 23px;
+  width: 23px;
+  background-position: 0px -343px;
+}
+
+.uniform-agent div.radio:active span, 
+.uniform-agent div.radio.active span {
+	background-position: -23px -343px;
+}
+
+.uniform-agent div.radio.focus span, 
+.uniform-agent div.radio:hover span {
+	background-position: -46px -343px;
+}
+
+.uniform-agent div.radio.focus:active span,
+.uniform-agent div.radio:active:hover span,
+.uniform-agent div.radio.active:hover span,
+.uniform-agent div.radio.active.focus span {
+	background-position: -69px -343px;
+}
+
+.uniform-agent div.radio span.checked {
+	background-position: -92px -343px;
+}
+
+.uniform-agent div.radio:active span.checked,
+.uniform-agent div.radio.active span.checked {
+	background-position: -115px -343px;
+}
+
+.uniform-agent div.radio.focus span.checked, 
+.uniform-agent div.radio:hover span.checked {
+	background-position: -138px -343px;
+}
+
+.uniform-agent div.radio.focus:active span.checked, 
+.uniform-agent div.radio:hover:active span.checked,
+.uniform-agent div.radio.focus.active span.checked,
+.uniform-agent div.radio.active:hover span.checked {
+	background-position: -161px -343px;
+}
+
+.uniform-agent div.radio.disabled span,
+.uniform-agent div.radio.disabled:active span,
+.uniform-agent div.radio.disabled.active span {
+	background-position: -184px -343px;
+}
+
+.uniform-agent div.radio.disabled span.checked,
+.uniform-agent div.radio.disabled:active span.checked,
+.uniform-agent div.radio.disabled.active span.checked {
+	background-position: -207px -343px;
+}
+
+/* uploader */
+
+.uniform-agent div.uploader {
+  background-position: 0px -366px;
+  height: 32px;
+}
+
+.uniform-agent div.uploader span.action {
+  background-position: right -494px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.uniform-agent div.uploader span.filename {
+  height: 24px;
+  /* change this line to adjust positioning of filename area */
+  margin: 4px 0px 4px 4px;
+  line-height: 24px;
+}
+
+.uniform-agent div.uploader.focus,
+.uniform-agent div.uploader.hover,
+.uniform-agent div.uploader:hover {
+  background-position: 0px -430px;
+}
+
+.uniform-agent div.uploader.focus span.action,
+.uniform-agent div.uploader.hover span.action,
+.uniform-agent div.uploader:hover span.action {
+  background-position: right -526px;
+}
+
+.uniform-agent div.uploader.active span.action,
+.uniform-agent div.uploader:active span.action {
+  background-position: right -558px;
+}
+
+.uniform-agent div.uploader.focus.active span.action,
+.uniform-agent div.uploader:focus.active span.action,
+.uniform-agent div.uploader.focus:active span.action,
+.uniform-agent div.uploader:focus:active span.action {
+  background-position: right -590px;
+}
+
+.uniform-agent div.uploader.disabled {
+  background-position: 0px -398px;
+}
+
+.uniform-agent div.uploader.disabled span.action {
+  background-position: right -462px;
+}
+
+/* PRESENTATION */
+
+/* Select */
+.uniform-agent div.selector {
+  width: 190px;
+  font-weight: bold;
+  color: #464545;
+  font-size: 11px;
+}
+
+.uniform-agent div.selector select {
+  width: 190px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	border: solid 1px #fff;
+}
+
+.uniform-agent div.selector span {
+  padding: 0px 25px 0px 2px;
+  cursor: pointer;
+}
+
+.uniform-agent div.selector span {
+  color: #ffffff;
+  width: 158px;
+  text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;
+}
+
+.uniform-agent div.selector.disabled span {
+	color: #bbb;
+}
+
+/* checker */
+.uniform-agent div.checker {
+  margin-right: 10px;
+}
+
+/* radio */
+.uniform-agent div.radio {
+  margin-right: 10px;
+}
+
+/* uploader */
+.uniform-agent div.uploader {
+  width: 190px;
+  cursor: pointer;
+}
+
+.uniform-agent div.uploader span.action {
+  width: 83px;
+  text-align: center;
+  text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;
+  background-color: #1a1a1a;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.uniform-agent div.uploader span.filename {
+  color: #1a1a1a;
+  width: 82px;
+  border-right: solid 1px #2e2e2e;
+  font-size: 90%;
+  font-size: 11px;
+}
+
+.uniform-agent div.uploader input {
+  width: 190px;
+}
+
+.uniform-agent div.uploader.disabled span.action {
+  color: #aaa;
+}
+
+.uniform-agent div.uploader.disabled span.filename {
+  border-color: #ddd;
+  color: #aaa;
+}
+/*
+
+CORE FUNCTIONALITY 
+
+Not advised to edit stuff below this line
+-----------------------------------------------------
+*/
+
+.uniform-agent .selector select:focus, 
+.uniform-agent .radio input:focus, 
+.uniform-agent .checker input:focus, 
+.uniform-agent .uploader input:focus {
+  outline: 0;
+}
+
+/* Select */
+
+.uniform-agent div.selector {
+	position: relative;
+	padding-left: 10px;
+}
+
+.uniform-agent div.selector span {
+	display: block;
+	float: left;
+}
+
+.uniform-agent div.selector select {
+	position: absolute;
+	opacity: 0;
+}
+
+/* checker */
+
+.uniform-agent div.checker {
+	position: relative;
+	float: left;
+}
+
+.uniform-agent div.checker span {
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+.uniform-agent div.checker input {
+  opacity: 0;
+  display: inline-block;
+}
+
+/* radio */
+
+.uniform-agent div.radio {
+	position: relative;
+	float: left;
+}
+
+.uniform-agent div.radio span {
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+.uniform-agent div.radio input {
+  opacity: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+/* uploader */
+
+.uniform-agent div.uploader {
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+.uniform-agent div.uploader span.action {
+  float: left;
+  display: inline;
+  padding: 4px 0px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.uniform-agent div.uploader span.filename {
+  padding: 0px 10px;
+  float: left;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.uniform-agent div.uploader input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  float: right;
+}

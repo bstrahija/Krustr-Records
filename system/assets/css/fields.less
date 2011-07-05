@@ -1,0 +1,132 @@
+/* --------------------------------------------
+
+forms.css
+
+Project:	 Krustr
+Author:	     Boris Strahija
+URL:		 http://creolab.hr
+Copyright:   Boris Strahija, Creo
+	
+----------------------------------------------- */
+
+
+
+/* @group Global
+----------------------------------------------- */
+
+/* Field administration */
+.panel-divs { margin: 0; padding: 0; list-style-type: none; }
+table a.act { white-space: nowrap; }
+	
+	/* Groups */
+	.panel-divs .group { padding: 8px; background: #fff; border: 1px solid #ccc; margin: 0 0 15px 0; position: relative; 
+		text-shadow: 0 1px 0 #000; .border-radius(6px); .box-shadow(0 15px 10px -10px rgba(0,0,0,0.3), 0 1px 4px rgba(0,0,0,0.1), 0 0 40px rgba(0,0,0,.05) inset);
+	}
+		.panel-divs .group h3             { font-size: 13px; margin: 0; padding: 0; border: none; background: #404040; padding: 0 8px; margin: 0 0 2px 0; .border-radius(4px 4px 0 0); }
+		.panel-divs .group h3 a           { color: #eee; text-decoration: none; display: block; height: 32px; line-height: 34px; font-weight: bold; }
+		.panel-divs .group h3 em          { font-style: normal; font-weight: normal; margin: 0 3px 0 0; }
+		.panel-divs .group .actions       { position: absolute; top: 13px; right: 13px; font-size: 12px; color: #fefefe; text-shadow: 0 1px 0 #333; }
+			.panel-divs .group .actions a { font-size: 11px; color: #fefefe; text-decoration: none; float: left; font-weight: bold; padding: 4px 6px 3px 6px; margin: 0 0 0 4px;
+				.border-radius(5px); .gradient(#505050; #707070);
+			}
+			.panel-divs .group .actions a:hover { text-decoration: none;
+				.border-radius(5px); .gradient(#606060; #909090);
+			}
+			.panel-divs .group .actions .picto { margin-right: 2px; }
+	
+	/* Fields */
+	.panel-divs .group .all-fields                      { margin: 0 0 0 0; text-shadow: 0 1px 0 #fff; }
+	.panel-divs .group table                            { margin: 0; }
+	.panel-divs .group table td.title                   { font-weight: bold; white-space: nowrap; display: block; }
+	.panel-divs .group table td.title em                { font-size: 18px; font-weight: normal; float: left; width: 18px; margin: 0 5px 0 0; position: relative; top: -7px; text-align: center; }
+	.panel-divs .group table td.title span              {  }
+	.panel-divs .group table td.type-gallery em 		{ background: url(../images/icn_field_gallery_16.png) no-repeat 0 50%; }
+	.panel-divs .group table td.type-number em 			{ background: url(../images/icn_field_number_16.png) no-repeat 0 50%; }
+	.panel-divs .group table td.type-date em 			{ background: url(../images/icn_calendar_16.png) no-repeat 0 50%; }
+	.panel-divs .group table td.type-email em 			{ background: url(../images/icn_field_email_16.png) no-repeat 0 50%; }
+	.panel-divs .group table td.type-image em 			{ background: url(../images/icn_field_image_16.png) no-repeat 0 50%; }
+	.panel-divs .group table td.type-video em 			{ background: url(../images/icn_field_video_16.png) no-repeat 0 50%; }
+	.panel-divs .group table td.type-url em 			{ background: url(../images/icn_field_url_16.png) no-repeat 0 50%; }
+	.panel-divs .group table td.type-partial em 		{ background: url(../images/icn_notepad_16.png) no-repeat 0 50%; }
+	.panel-divs .group table td.type-field_matrix em 	{ background: url(../images/icn_field_matrix_16.png) no-repeat 0 50%; }
+	
+	/* Nicer layout */
+	.panel-divs .all-fields ul           { margin: 0 0 5px 0; padding: 0; list-style-type: none; display: table; width: 100%; }
+	.panel-divs .all-fields li           { display: table-row; }
+	.panel-divs .all-fields li:hover div { background: #eee; }
+	.panel-divs .all-fields li div       { display: table-cell; border-bottom: 1px solid #ddd; padding: 8px 0; }
+	.panel-divs .all-fields a            { text-decoration: none; color: #666; }
+	.panel-divs .all-fields .picto       { margin-right: 2px; font-size: 115%; top: 0; }
+	.panel-divs .all-fields .mnml        { margin-right: 2px; font-size: 150%; }
+	.panel-divs .all-fields .type        { font-size: 10px; color: #999; }
+	.panel-divs .all-fields .title       { font-weight: bold; }
+	.panel-divs .all-fields .field-id    { width: 1%; text-align: right; padding-right: 10px; font-size: 10px; color: #999; }
+	.panel-divs .all-fields .sort        { width: 1%; text-align: center; padding-right: 10px; }
+	.panel-divs .all-fields .act         { width: 1%; padding-left: 10px; padding-right: 10px; white-space: nowrap; text-align: left; }
+	.panel-divs .all-fields a.handle .picto  { font-size: 100%; margin-left: 5px; }
+	
+	/* Gallery upload and preview */
+	.gallery-uploader                   {  }
+	.gallery-uploader .preview ul       { margin: 0; padding: 0; list-style-type: none; }
+	.gallery-uploader .preview ul:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+	.gallery-uploader .preview li       { float: left; width: 64px; height: 100px; border: 1px solid #d2d2d2; padding: 3px; margin: 0 5px 5px 0; .border-radius(3px); }
+	.gallery-uploader .act              { background: #555; color: #eee; text-decoration: none; display: block; padding: 2px 6px; font-size: 8px; text-shadow: 0 -1px 0 rgba(0,0,0,.3); white-space: nowrap; .border-radius(2px); margin: 1px 0 3px 0; text-transform: uppercase; font-weight: bold; }
+	.gallery-uploader .act:hover        { background: #777; }
+	.gallery-uploader .act.remove       { background: #a00; color: #fff; }
+	.gallery-uploader .act.remove:hover { background: #c00; }
+	.gallery-uploader .act.edit         { background: #3f7fa5; color: #fff; }
+	.gallery-uploader .act.edit:hover   { background: #5f9fc7; }
+		
+		/* Gallery details */
+		.gallery-details           { margin: 0 0 20px 0; }
+		.gallery-uploader .preview { margin: 0 0 20px 0; }
+		
+		/* No img preview */
+		.preview .no-img:after     { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+		.preview .no-img .img      { font-size: 48px; float: left; color: #999; }
+		.preview .no-img .img em   { font-weight: normal !important; }
+		.preview .no-img .desc     { float: left; font-size: 12px; padding: 34px 0 0 10px; }
+
+	/* Image upload and preview */
+	.image-uploader .preview               { width: 140px; float: left; }
+	.image-uploader .preview img { box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+	.image-uploader .image-details         { margin-left: 150px; margin-bottom: 20px; }
+	.image-uploader-box                    { clear: both; margin: 20px 0 0 0; }
+	.image-uploader .preview .picto.none   { font-size: 102px; color: #888; margin-bottom: -30px; }
+	.image-uploader .preview .remove-image { color: #c00; text-decoration: none; font-size: 11px; font-weight: bold; display: block; text-align: left; margin: 3px 0 0 0; }
+	
+	/* Relations */
+	#scene form .relations                                  { .border-radius(5px); border: 1px dashed #bbb; background: #f6f6f6; padding: 10px 10px 20px 10px; margin: 0 0 5px 0; }
+	#scene form .relations .relation-toggle                 { display: block; margin: 0 0 8px 0; padding: 2px 10px; width: 120px; font-size: 11px; font-weight: normal; }
+	#scene form .relations h4                               { border-top: 1px dotted #ccc; padding: 12px 0 0 0; margin-top: 20px; }
+	#scene form .relations .relation-scroller               { display: none; margin: 0 0 20px 0; position: relative; border: 1px dotted #ccc; padding: 8px; background: #eee; max-height: 220px; overflow: auto; }
+	#scene form .relations .relation-scroller h4            { margin: 0 0 6px 0; border: none; background: transparent; float: left; margin-right: 6px; }
+	#scene form .relations .relation-scroller ul            { list-style-type: none; margin: 0; padding: 0; clear: both; }
+	#scene form .relations .relation-scroller ol            { list-style-type: none; margin: 0; padding: 10px 0 0 4px; clear: both; }
+	#scene form .relations .relation-scroller li            { padding: 3px 0 2px 0; margin: 0 0 4px 0; font-size: 12px; color: #666; }
+	#scene form .relations .relation-scroller li label      { text-transform: none; font-weight: normal; position: relative; top: -4px; left: 0; padding: 0; display: inline; 
+		margin: 0; background: none; color: #666; font-family: Helvetica, Arial, sans-serif; text-shadow: 0 1px 0 #fff; font-size: 12px;	 }
+	#scene form .relations .relation-scroller li label em   { font-weight: bold; font-style: normal; }
+	#scene form .relations .checker                         { position: relative; top: -3px; }
+	#scene form .relations .relation-scroller li .checker   { float: left; }
+	#scene form .relations .relation-scroller li.chk label  { position: relative; top: 0px; }
+	#scene form 
+	#scene form .relations .relation-scroller .filter       { margin: 5px 0 10px 0; padding-bottom: 10px; border-bottom: 1px dotted #ccc; }
+	#scene form .relations .relation-scroller .filter input { width: 200px; }
+
+
+
+
+/* Blockquote bubble test */
+.panel-bubble             { position: relative; padding: 10px 12px 11px 12px; margin:0 0 20px 0; color:#eee; .gradient(#111; #333); .border-radius(6px); text-shadow: 0 1px 0 rgba(0,0,0,.8); }
+.panel-bubble:after       { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.panel-bubble i           { font-family: Palatino, Georgia; font-weight: normal; font-style: italic; color: #ccc; text-shadow: 0 1px 0 #000; }
+.panel-bubble h4          { color: #fff; margin: 0; font-size: 22px; float: left; }
+.panel-bubble h4 em       { color: #f3f3f3; font-weight: normal; padding: 0 3px 0 0; font-style: normal; }
+.panel-bubble a.add       { float: right; color: #fff; position: relative; top: 3px; text-decoration: none; font-size: 11px; color: #fefefe; text-decoration: none; font-weight: bold; padding: 4px 6px; margin: 0 0 0 8px;
+	.border-radius(5px); .gradient(#444; #222);
+}
+.panel-bubble a.add:hover { text-decoration: none; .gradient(#333; #111); }
+
+
+/* @end */

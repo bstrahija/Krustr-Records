@@ -1,0 +1,114 @@
+/* --------------------------------------------
+
+header_footer.css
+
+Project:	 Krustr
+Author:	     Boris Strahija
+URL:		 http://creolab.hr
+Copyright:   Boris Strahija, Creo
+	
+----------------------------------------------- */
+
+
+
+/* @group Header
+----------------------------------------------- */
+
+header#hd1 { background: #111 url(../images/bg/black_linen.png); color: #e2e2e2; text-shadow: 0 1px 0 rgba(0,0,0,.6); position: fixed; top: 0; left: 0; width: 100%;
+	border-bottom: 3px solid #5BA4B3; z-index: 4;
+}
+	header#hd1.wsub { .box-shadow(0 0 0 transparent); }
+	header#hd1 .w { padding: 4px 0 3px 0; border-top: 1px solid #444; background: rgba(255,255,255,.02); }
+	header#hd1 .w:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+	header#hd1 #logo { float: left; padding: 0 0 0 0; position: relative; left: -10px; height: 34px; position: relative; top: 1px; }
+	header#hd1 h1 { float: left; font-family: 'Palatino', 'Georgia', Helvetica; font-size: 28px; font-weight: bold; margin: 0 25px 0 0; letter-spacing: 1px; font-weight: normal; position: relative; padding: 0 0 0 40px; }
+	header#hd1 h1 a { color: #eee; text-decoration: none; }
+	header#hd1 h1 .picto { display: none; font-size: 30px; font-weight: normal; position: absolute; top: 0px; left: 8px; color: #7dc5d5; text-shadow: 0 -1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.3); }
+	header#hd1 h1 a:hover { color: #ddd; text-shadow: 0 0 5px rgba(255,255,255,1); -webkit-transition: all .5s ease-in-out; }
+	header#hd1 .logo { font-family: "The Bomb"; font-size: 38px; font-weight: normal; position: absolute; top: -2px; left: 0; color: #7dc5d5; text-shadow: 0 -1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.3); }
+	header#hd1 .logo.default:after { content: "Z"; }
+		
+		/* Image logo */
+		header#hd1 .img-logo { vertical-align: text-top; position: relative; top: -7px; left: 5px; }
+		
+		/* Ignite */
+		header#hd1 .logo.ignite { font-size: 36px; color: #ff5946; top: -7px; left: 5px; }
+		header#hd1 .logo.ignite:after { content: "i"; }
+		
+		/* Love */
+		header#hd1 .logo.love { font-size: 30px; color: #ddd; top: -2px; left: 0; }
+		header#hd1 .logo.love:after { content: "I"; }
+		
+		/* Star */
+		header#hd1 .logo.star { font-size: 30px; color: #ddd; top: -2px; left: 4px; }
+		header#hd1 .logo.star:after { content: "U"; }
+		
+	
+	/* Meta */
+	#user-info { margin: -10px 0 -10px 0; padding: 8px 15px 0 15px; color: #d2d2d2; border-left: 1px solid #383838; background: rgba(0,0,0,.3); height: 38px; float: right; }
+	#user-info .avatar { float: right; margin-left: 10px; }
+	#user-info .avatar img { border: 1px solid #777; .border-radius(2px); }
+	#user-info .greeting { float: right; white-space: nowrap; text-align: right; font-size: 11px; line-height: 130%; position: relative; top: 3px; }
+	#user-info .greeting a { color: #d2d2d2; text-decoration: none; font-weight: normal; }
+	#user-info .greeting a:hover { color: #00b7D2; }
+	#user-info .greeting a.logout { color: #F55946; font-size: 10px; }
+	#user-info .greeting a.logout:hover { color: #a00; }
+	#user-info:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+	
+	/* Language picker */
+	header#hd1 .langs { float: right; font-size: 11px; position: relative; top: 0; right: 2px; }
+	header#hd1 .langs select,
+	header#hd1 .langs .selector      { width: 100px; font-size: 11px; }
+	header#hd1 .langs .selector span { width: 70px; font-size: 11px; }
+
+/* @end */
+
+
+
+/* @group Page head and actions
+----------------------------------------------- */
+
+hgroup.pg { margin: 16px 40px 10px 40px; }
+	hgroup.pg .w { width: 100%; overflow: hidden; }
+	hgroup.pg h1 { text-shadow: 0 1px 0 #fff; color: #3f3f3f; font-size: 22px; font-weight: bold; margin: 0; font-family: "Helvetica Neue", Helvetica, Arial; border-right: 1px solid #999; float: left; padding-right: 15px; margin-right: 15px; }
+	hgroup.pg h1 .picto { position: relative; top: -2px; margin: 0 2px 0 0; }
+	hgroup.pg h1 i { font-weight: normal; font-style: italic; font-size: 100%; color: #555; font-family: "Palatino", Georgia; }
+	hgroup.pg h2 { font-size: 12px; color: #555; font-weight: bold; padding: 8px 10px 0 0; float: left; }
+	hgroup.pg h2 a.help { color: #555; text-decoration: none; margin-right: 5px; }
+	hgroup.pg h2 a.help:hover { text-shadow: 0 0 5px rgba(255,255,255,1); color: #222; -webkit-transition: all .5s ease-in-out; }
+	
+	/* Actions */
+	hgroup.pg .actions { float: left; position: relative; top: 4px; right: 3px; }
+	hgroup.pg .actions ul { list-style-type: none; font-size: 10px; font-weight: bold; margin: 0 0 0 8px; }
+	hgroup.pg .actions ul:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+	hgroup.pg .actions li { float: left; margin-right: 8px; }
+	hgroup.pg .actions a { float: left; padding: 4px 14px; background: rgba(0,0,0,.7); .border-radius(3px); text-decoration: none; color: #ddd; font-size: 11px; font-weight: bold;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.3); .box-shadow(inset 1px 1px 3px rgba(0,0,0,.2), inset 0 -1px 1px rgba(0,0,0,.01), 0 1px 2px rgba(0,0,0,.2));
+	}
+	hgroup.pg .actions a .picto { margin-right: 3px; }
+	hgroup.pg .actions a:hover { background: rgba(0,0,0,.9); -webkit-transition: all .5s ease-in-out; }
+	
+	/* Different colors */
+	hgroup.pg .actions a.add { background: rgba(111,131,6,.7); color: #fff; .box-shadow(inset 1px 1px 3px rgba(0,0,0,.2), inset 0 -1px 1px rgba(0,0,0,.01), 0 1px 2px rgba(0,0,0,.2)); }
+	hgroup.pg .actions a.add:hover { background: rgba(111,131,6,.95); -webkit-transition: all .3s ease-in-out; }
+	hgroup.pg .actions a.remove { background: rgba(180,43,1,.7); color: #fff; .box-shadow(inset 1px 1px 3px rgba(0,0,0,.2), inset 0 -1px 1px rgba(0,0,0,.01), 0 1px 2px rgba(0,0,0,.2)); }
+	hgroup.pg .actions a.remove:hover { background: rgba(180,43,1,.95); -webkit-transition: all .3s ease-in-out; }
+	hgroup.pg .actions a.edit { background: rgba(91,168,238,.7); color: #fff; .box-shadow(inset 1px 1px 3px rgba(0,0,0,.2), inset 0 -1px 1px rgba(0,0,0,.01), 0 1px 2px rgba(0,0,0,.2)); }
+	hgroup.pg .actions a.edit:hover { background: rgba(91,168,238,1); -webkit-transition: all .3s ease-in-out; }
+	
+	
+
+/* @end */
+
+
+
+/* @group Footer
+----------------------------------------------- */
+
+footer#f1 { background: url(../images/bg/noise_dark.png); color: #f6f6f6; padding: 5px 30px; border-top: 1px solid #686764; clear: both; overflow: hidden; margin: 20px 0 -32px 0; }
+	footer#f1 p { margin: 0; padding: 0; font-size: 10px; color: #ddd; font-family: "Helvetica Neue", Helvetica, Arial; text-align: center; text-shadow: none; }
+	footer#f1 b { font-family: Porcelain; font-size: 18px; margin: 0 6px; position: relative; top: -3px; }
+	footer#f1 a { color: #eee; text-decoration: none; font-weight: bold; }
+	footer#f1 a:hover { color: #00b7d2; }
+
+/* @end */

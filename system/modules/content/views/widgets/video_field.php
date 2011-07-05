@@ -1,0 +1,1 @@
+<div class="video-preview"><a class="lightbox" href="<?php echo $content; ?>" target="_blank"><img src="<?php echo $this->video_embed->get_video_thumb($content); ?>" width="128" alt="Video Thumbnail"></a></div>

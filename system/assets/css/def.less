@@ -1,0 +1,289 @@
+/* --------------------------------------------
+
+def.css
+
+Project:	 Krustr
+Author:	     Boris Strahija
+URL:		 http://creolab.hr
+Copyright:   Boris Strahija, Creo
+Description: LESS definitions
+	
+----------------------------------------------- */
+
+
+
+/* @group Background
+----------------------------------------------- */
+
+/*.body-bg() { background: #d6d6d6; }*/
+/*.body-bg() { background: transparent url(../images/noise.png) repeat 0 0; }*/
+.body-bg() { background: #ddd; }
+
+.light-noise() { background: #ddd url(../images/bg/noise_light.png); }
+.dark-noise() { background: #292929 url(../images/bg/concrete_wall.png); }
+
+.gradient (@from: #555; @to: #333) {
+	background: @to;
+	background: -moz-linear-gradient(top, @from, @to);
+	background: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+}
+
+.dark-gradient-noise-alt () {
+	background-image:
+        -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.1)), to(rgba(0,0,0,.3))),
+        url(../images/bg/noise_gray.png);
+    
+    background-image:
+        -moz-linear-gradient(0% 0% -90deg, rgba(0,0,0,.1), rgba(0,0,0,.3)),
+        url(../images/bg/noise_gray.png);
+    
+    background-color: #333;
+}
+
+.dark-gradient-noise () {
+	background: #333 url(../images/bg/noise_gray.png);
+}
+	
+/* @end */
+
+
+
+/* @group Shadows
+----------------------------------------------- */
+
+.shadow-box-c (@x: 1px; @y: 1px; @blur: 1px; @color: #000) {
+	-moz-box-shadow: @x @y @blur @color;
+	-webkit-box-shadow: @x @y @blur @color;
+	box-shadow: @x @y @blur @color;
+}
+
+.shadow-box-c-inset (@x: 1px; @y: 1px; @blur: 1px; @color: #000) {
+	-moz-box-shadow: inset @x @y @blur @color;
+	-webkit-box-shadow: inset @x @y @blur @color;
+	box-shadow: inset @x @y @blur @color;
+}
+
+.shadow-box (@def: 1px 1px 1px #000) {
+	-moz-box-shadow: @def;
+	-webkit-box-shadow: @def;
+	box-shadow: @def;
+}
+
+/* @end */
+
+
+
+/* @group Misc
+----------------------------------------------- */
+
+.rotate(@deg: -90deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	transform: rotate(@deg);
+}
+
+.round-tab (@radius: 5px) {
+	-moz-border-radius-topleft: @radius; -moz-border-radius-topright: @radius;
+	-webkit-border-top-left-radius: @radius; -webkit-border-top-right-radius: @radius;
+	border-top-left-radius: @radius; border-top-right-radius: @radius;
+}
+
+.border-box () {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+}
+
+/* @end */
+
+
+
+
+/* @group Buttons
+----------------------------------------------- */
+
+.btn-black (@padding: 9px 25px 8px 25px; @font-size: 12px) {
+	color: rgba(255,255,255,.8); border: 1px solid rgba(0,0,0,.9); background: transparent; padding: @padding; position: relative; left: 0; float: none;
+	.border-radius(4px); .gradient(#111; #333); .box-shadow(-1px -1px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(255,255,255,.1), 1px 1px 0 rgba(0,0,0,.2));
+	font-family: "Arial Narrow"; font-weight: bold; text-transform: uppercase; width: auto; font-size: @font-size; text-shadow: 0 1px 0 #000; margin-right: 8px;
+	text-decoration: none;
+}
+
+/* @end */
+
+
+
+/*--------------------------------------------------
+Bootstrap.less v1
+--------------------------------------------------
+Colors
+-------------------------------------------------- */
+
+/* Links */
+/*@link-color: #8b59c2;
+@link-hover-color: darken(@link-color, 10);
+
+/* Grays */
+/*@white: #fff;
+@gray-lighter: #ccc;
+@gray-light: #777;
+@gray: #555;
+@gray-dark: #333;
+@black: #000;
+
+/* Accent Colors */
+/*@blue: #00b3ee;
+@green: #46a546;
+@red: #9d261d;
+@yellow: #ffc40d;
+@orange: #f89406;
+@pink: #c3325f;
+@purple: #7a43b6;
+
+
+/*--------------------------------------------------
+Mixins
+-------------------------------------------------- */
+
+/* Clearfix for clearing floats like a boss */
+.clearfix {
+	zoom: 1;
+	&:after {
+		display: block;
+		visibility: hidden;
+		height: 0;
+		clear: both;
+		content: ".";
+	}
+}
+
+/* Font Stacks */
+.sans-serif(@weight: normal; @size: 14px; @lineheight: 20px) {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: @size;
+	font-weight: @weight;
+	line-height: @lineheight;
+}
+.serif(@weight: normal; @size: 14px; @lineheight: 20px) {
+	font-family: "Georgia", Times New Roman, Times, sans-serif;
+	font-size: @size;
+	font-weight: @weight;
+	line-height: @lineheight;
+}
+.monospace(@weight: normal; @size: 12px; @lineheight: 20px) {
+	font-family: "Monaco", Courier New, monospace;
+	font-size: @size;
+	font-weight: @weight;
+	line-height: @lineheight;
+}
+
+/* Grid System */
+@grid_columns: 16;
+@grid_column_width: 40px;
+@grid_gutter_width: 20px;
+.container {
+	width: (@grid_column_width * @grid_columns) + (@grid_gutter_width * (@grid_columns - 1));
+	.clearfix;
+}
+.columns(@column_span: 1) {
+	display: inline;
+	float: left;
+	width: (@grid_column_width * @column_span) + (@grid_gutter_width * (@column_span - 1));
+	margin-left: @grid_gutter_width;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+/* Border Radius */
+.border-radius(@radius: 5px) {
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+/* Drop shadows */
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+	-webkit-box-shadow: @shadow;
+	-moz-box-shadow: @shadow;
+	box-shadow: @shadow;
+}
+
+/* Transitions */
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	transition: @transition;
+}
+
+/* CSS3 Content Columns */
+.content-columns(@column_count, @column_gap: 20px) {
+	-webkit-column-count: @column_count;
+	-webkit-column-gap: @column_gap;
+	-moz-column-count: @column_count; 
+	-moz-column-gap: @column_gap;
+	column-count: @column_count; 
+	column-gap: @column_gap;
+}
+
+/* Buttons */
+.button(@color: #f5f5f5; @text_color: #333; @text_shadow: 0 1px 1px rgba(255,255,255,.75); @font_size: 13px; @padding: 9px 15px 10px; @rounded: 6px) {
+	display: inline-block;
+	#gradient > .vertical(@color,darken(saturate(@color,10),10));
+	padding: @padding;
+	text-shadow: @text_shadow;
+	color: @text_color;
+	line-height: 20px;
+	.border-radius(@rounded);
+	@shadow: inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.25);
+	.box-shadow(@shadow);
+	&:hover {
+		background-position: 0 -15px;
+		color: @text_color;
+		text-decoration: none;
+	}
+}
+
+/* Add an alphatransparency value to any background or border color (via Elyse Holladay) */
+#translucent {
+	.background(@color: @white; @alpha: 1) {
+		background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+	}
+	.border(@color: @white; @alpha: 1) {
+		border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+		background-clip: padding-box;
+	}
+}
+
+/* Gradients */
+#gradient {
+	.horizontal(@startColor: #555; @endColor: #333) {
+		background-color: @endColor;
+		background-repeat: no-repeat;
+		background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+		background-image: -webkit-linear-gradient(right center, @startColor, @endColor);
+		background-image: -moz-linear-gradient(right center, @startColor, @endColor);
+		background-image: -o-linear-gradient(left,  @startColor,  @endColor);
+		background-image: -khtml-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	}
+	.vertical(@startColor: #555; @endColor: #333) {
+		background-color: @endColor;
+		background-repeat: no-repeat;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+		background-image: -webkit-linear-gradient(@startColor, @endColor);
+		background-image: -moz-linear-gradient(@startColor, @endColor);
+		background-image: -o-linear-gradient(top,  @startColor,  @endColor);
+		background-image: -khtml-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	}
+	.vertical-three-colors(@startColor: #00b3ee; @midColor: #7a43b6; @colorStop: 0.5; @endColor: #c3325f) {
+		background-color: @endColor;
+		background-repeat: no-repeat;
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+		background-image: -webkit-linear-gradient(@startColor, color-stop(@colorStop, @midColor), @endColor);
+		background-image: -moz-linear-gradient(@startColor, color-stop(@midColor, @colorStop), @endColor);
+	}
+}
+
+
+

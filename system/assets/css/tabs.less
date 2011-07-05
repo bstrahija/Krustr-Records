@@ -1,0 +1,70 @@
+/* --------------------------------------------
+
+tabs.css
+
+Project:	 Krustr
+Author:	     Boris Strahija
+URL:		 http://creolab.hr
+Copyright:   Boris Strahija, Creo
+	
+----------------------------------------------- */
+
+
+
+/* @group Global
+----------------------------------------------- */
+	
+.tabs { background-color: #e4e4e4; list-style-type: none; border: 2px solid #e4e4e4; width: 683px; height: 25px; padding: 1px; margin: 0 auto 14px auto;  .border-radius(4px); .box-shadow( 0 1px 0 rgba(255, 255, 255, .15)); position: relative; top: -5px; }
+.tabs-l { margin: 0 0 14px 0; }
+.tabs li { background-color: #595959; float: left; margin-left: 1px; }
+.tabs li { 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .1)), to(rgba(255, 255, 255, 0)));
+    background-image: -moz-linear-gradient(0 0 -90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
+}
+.tabs li { .box-shadow(255, 255, 255, .1); }
+.tabs li:first-child { margin-left: 0; .border-radius(3px 0 0 3px); }
+.tabs li:last-child { .border-radius(0 3px 3px 0); }
+.tabs a { font-size: 11px; font-weight: bold; line-height: 24px; text-align: center; text-decoration: none; display: block; width: 125px; height: 25px; }
+.tabs a:hover { color: #fff; }
+.tabs a { color: #ddd; text-shadow: 0 1px 0 rgba(0,0,0,.45); }
+.tabs li:active { background-color: #333; }
+.tabs li:active { .box-shadow(inset 0 1px 4px rgba(0, 0, 0, .15), inset 0 0 5px rgba(0, 0, 0, .1)); }
+.tabs li:active a { text-shadow: 0 1px 0 rgba(255, 255, 255, .1); position: relative; top: 1px; }
+.tabs li.on { 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.5)), to(0,0,0,.2)),
+        url(../images/bg/noise_gray.png);
+    background-image:
+        -moz-linear-gradient(0% 0% -90deg, rgba(0,0,0,.5), rgba(0,0,0,.2)),
+        url(../images/bg/noise_gray.png);
+    
+    background-color: #333; .box-shadow(inset 0 1px 3px rgba(0, 0, 0, .1), inset 0 0 5px rgba(0, 0, 0, .15));
+}
+
+.tabs li:target a {color: #fff; text-shadow: 0 1px 0 #000;}
+.tabs li:target:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.4)), to(0,0,0,.1)),
+        url(../images/bg/noise_gray.png);
+    background-image:
+        -moz-linear-gradient(0% 0% -90deg, rgba(0,0,0,.4), rgba(0,0,0,.1)),
+        url(../images/bg/noise_gray.png);
+    
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
+                        inset 0 0 5px rgba(0, 0, 0, .15);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
+                     inset 0 0 5px rgba(0, 0, 0, .15);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
+                inset 0 0 5px rgba(0, 0, 0, .15);
+}
+
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
