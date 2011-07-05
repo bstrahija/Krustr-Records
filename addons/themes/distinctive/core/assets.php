@@ -1,0 +1,1 @@
+<h3>Assets partial</h3>

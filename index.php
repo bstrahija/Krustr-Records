@@ -28,23 +28,16 @@
 	// Define environment based on the domain
 	switch ($domain)
 	{
-		case 'mudra.local':
+		case 'krecords.local':
 		case '192.168.1.169':
 			define('ENVIRONMENT', 'local');
 		break;
 		
-		case 'test.mudrakupovina.hr':
-			define('ENVIRONMENT', 'testing');
-		break;
-		
-		case 'mudrakupovina.hr':
-		case 'www.mudrakupovina.hr':
-			$base_url = 'http://www.mudrakupovina.hr';
+		case 'www.krustr-records.hr':
 			define('ENVIRONMENT', 'production');
 		break;
 		
 		default:
-			$base_url = 'http://dev.mudrakupovina.hr';
 			define('ENVIRONMENT', 'development');
 	}
 	
