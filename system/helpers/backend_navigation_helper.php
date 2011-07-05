@@ -123,9 +123,10 @@ function backend_sub_navigation($mark_override = NULL, $echo = true)
 				elseif ($key == count($children) - 1) $extra_class .= ' last';
 				else                                       $extra_class .= ' mid';
 				
-				if (Auth::user_has_access($role)) {
-					$output .= '<li class="'.((@$nav_mark[2] == $s['mark']) ? 'on' : '').@$extra_class.'">'.anchor($s['link'], $icon.$s['label']).'</li>';
-				} // end if
+				if (Auth::user_has_access($role))
+				{
+					$output .= '<li class="'.((isset($nav_mark[2]) and $nav_mark[2] == $s['mark']) ? 'on' : '').@$extra_class.'">'.anchor($s['link'], $icon.$s['label']).'</li>';
+				}
 			endforeach;
 			
 			$output .= '</ul></div>';

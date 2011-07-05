@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	
-	<?php meta_tags(); ?>
+	<?php partial('meta_tags'); ?>
 	
 	<link rel="stylesheet" href="<?php echo theme_url(); ?>/assets/css/init.css?v=1.0">
 	<link rel="stylesheet" href="<?php echo theme_url(); ?>/assets/css/style.css?v=1.0">

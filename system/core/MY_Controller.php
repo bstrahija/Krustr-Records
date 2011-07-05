@@ -106,64 +106,61 @@ class CMS extends MY_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		self::$front_data 	= new stdClass();
-		self::$data 		= new stdClass();
-		
-		// Defaults
-		self::$data->yield  = '';
-		
-		// Load the recources
-		$this->benchmark->mark('KR_Load_Models_start');
-		$this->load->model(array(
-			 'content/entry_m'
-			,'content/published_m'
-			,'content/entry_meta_tag_m'
-			,'categories/category_m'
-			,'comments/comment_m'
-			,'channels/channel_m'
-			,'fields/field_m'
-			,'fields/field_content_m'
-			,'setting_m'
-			,'variables/variable_m'
-		));
-		$this->benchmark->mark('KR_Load_Models_end');
-		
-		// Load all the required libraries
-		$this->benchmark->mark('KR_Load_Libraries_start');
-		
-		// Some required libraries and helpers
-		$this->load->helper('content/cms');
-		$this->load->helper('browser');
-		$this->load->library('option');
-		$this->load->library('form');
-		$this->load->library('image_resize');
-		$this->load->library('authentication/auth');
-		$this->load->library('video_embed');
-		$this->load->library('comments/comment');
-		//$this->load->library('textile');
-		//$this->load->library('galleries/gallery');
-		//$this->load->library('navigation/navigation_lib');
-		//$this->load->library('newsletters/newsletter');
-		//$this->load->library('comments/comment');
-		
-		// Load HTML purifier
-		include(APPPATH.'/third_party/html_purifier/HTMLPurifier.auto.php');
-		
-		// Load the settings from the database
-		$this->_load_settings();
-		
-		// Get all channels and fields
-		$this->_get_channels();
-		
-		// Set theme path
-		self::$current_theme_path = self::$themes_path.CMS::$current_theme;
-		
-		// Get theme absolute path
-		self::$themes_abs_path = realpath(self::$themes_path).'/';
-		self::$current_theme_abs_path = realpath(self::$current_theme_path).'/';
-		
-		// Load the theme helper
-		$this->load->helper('theme');
+		if ( ! self::$front_data) {
+			self::$front_data = new stdClass();
+			self::$data       = new stdClass();
+			
+			// Defaults
+			self::$data->yield  = '';
+			
+			// Load the recources
+			$this->benchmark->mark('KR_Load_Models_start');
+			$this->load->model(array(
+				 'content/entry_m'
+				,'content/published_m'
+				,'content/entry_meta_tag_m'
+				,'categories/category_m'
+				,'comments/comment_m'
+				,'channels/channel_m'
+				,'fields/field_m'
+				,'fields/field_content_m'
+				,'setting_m'
+				,'variables/variable_m'
+			));
+			$this->benchmark->mark('KR_Load_Models_end');
+			
+			// Load all the required libraries
+			$this->benchmark->mark('KR_Load_Libraries_start');
+			
+			// Some required libraries and helpers
+			$this->load->helper('content/cms');
+			$this->load->helper('browser');
+			$this->load->library('option');
+			$this->load->library('form');
+			$this->load->library('image_resize');
+			$this->load->library('authentication/auth');
+			$this->load->library('video_embed');
+			$this->load->library('comments/comment');
+			
+			// Load HTML purifier
+			include(APPPATH.'/third_party/html_purifier/HTMLPurifier.auto.php');
+			
+			// Load the settings from the database
+			$this->_load_settings();
+			
+			// Get all channels and fields
+			$this->_get_channels();
+			
+			// Set theme path
+			self::$current_theme_path = self::$themes_path.CMS::$current_theme;
+			
+			// Get theme absolute path
+			self::$themes_abs_path = realpath(self::$themes_path).'/';
+			self::$current_theme_abs_path = realpath(self::$current_theme_path).'/';
+			
+			// Load the theme helper
+			$this->load->helper('theme');
+		}
 		
 	} // end __construct()
 	

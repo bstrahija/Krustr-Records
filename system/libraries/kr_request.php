@@ -259,7 +259,7 @@ class KR_Request extends Front {
 		else {
 			header("HTTP/1.0 404 Not Found");
 			if (CMS::$uri_segment[1] == BACKEND) $this->load_view = '../../../system/views/layouts/404';
-			else                                  $this->load_view = '404';
+			else                                 $this->load_view = '404';
 			
 		} // end if
 		

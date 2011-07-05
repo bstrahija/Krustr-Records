@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php partial('header'); ?>
 
 <section id="pitch">
 	<h1><?php echo site_slogan(); ?></h1>
@@ -38,4 +38,4 @@
 	<?php endforeach; endif; ?>
 </div>
 
-<?php get_footer(); ?>
+<?php partial('footer'); ?>

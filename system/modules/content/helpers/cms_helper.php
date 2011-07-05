@@ -379,9 +379,21 @@ function strip_html_tags( $text )
  */
 function theme_url($url = null)
 {
-	return reduce_double_slashes(site_url(CMS::$current_theme_path.'/'.$url).'/');
+	return reduce_double_slashes(site_url(CMS::$current_theme_path.'/'.$url));
 	
 } // end theme_url()
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+/**
+ *
+ */
+function assets_url($url = null)
+{
+	return reduce_double_slashes(site_url(CMS::$current_theme_path.'/assets/'.$url));
+	
+} // end assets_url()
 
 
 /* ------------------------------------------------------------------------------------------ */

@@ -59,7 +59,7 @@
 	<div class="block no-min analytics">
 		<div class="cont">
 			<div class="chart">
-				<?php if (@$analytic_views and @$analytic_visits) : ?>
+				<?php if (isset($analytic_views) and $analytic_views and isset($analytic_visits) and $analytic_visits) : ?>
 					<?php $this->load->view('analytics'); ?>
 				
 				<?php else : ?>

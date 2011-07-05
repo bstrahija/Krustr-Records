@@ -39,7 +39,7 @@
 
 <header id="hd1" class="wsub"><div class="w clearfix">
 	<hgroup id="logo">
-		<h1><a href="<?php echo site_url(); ?>" title="Dashboard"><img src="<?php echo theme_url().'/assets/img/cms_logo.png'; ?>" alt="logo" class="img-logo" /></a></h1>
+		<h1><a href="<?php echo site_url(); ?>" title="Live site"><em class="mnml">|</em>Demo</a></h1>
 	</hgroup>
 	
 	<hgroup id="user-info">

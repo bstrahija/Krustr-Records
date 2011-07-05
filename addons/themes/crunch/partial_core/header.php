@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	
-	{{> meta_tags}}
+	<?php partial('meta_tags'); ?>
 	
 	<link rel="stylesheet" href="{{theme_url}}assets/css/init.css?v=1.0">
 	<link rel="stylesheet" href="{{theme_url}}assets/css/style.css?v=1.0">
@@ -30,7 +30,7 @@
 			</hgroup>
 			<!-- /#logo-txt -->
 			
-			{{> navigation}}
+			<?php partial('navigation'); ?>
 			
 			<nav id="top-social">
 				<ul>
@@ -42,7 +42,7 @@
 			<!-- /#top-social -->
 			
 			<div id="top-search">
-				{{> search_form}}
+				<?php partial('search_form'); ?>
 			</div>
 			<!-- /#top-search -->
 		</header>

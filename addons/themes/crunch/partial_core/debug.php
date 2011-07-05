@@ -1,0 +1,1 @@
+<?php echo '<pre>'; print_r(CMS::$front_data); echo '</pre>'; ?>

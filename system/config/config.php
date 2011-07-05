@@ -226,7 +226,7 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 | system/cache/ folder.  Use a full server path with trailing slash.
 |
 */
-$config['cache_path'] = APPPATH.'/cache/';
+$config['cache_path'] = APPPATH.'cache/';
 
 /*
 |--------------------------------------------------------------------------
@@ -280,7 +280,7 @@ $config['sess_time_to_update']	= 300;
 $config['cookie_prefix'] = 'kr';
 $config['cookie_path']   = '/';
 if (ENVIRONMENT == 'local') $config['cookie_domain'] = '';
-else                        $config['cookie_domain'] = '.mudrakupovina.hr';
+else                        $config['cookie_domain'] = '.krustr.net';
 
 /*
 |--------------------------------------------------------------------------

@@ -8,9 +8,10 @@
  * @version 	0.1
  */
 
-class Page_Content extends CMS {
+class Theme_setup extends CMS {
 	
 	private $_setup = array();
+	private $_page_cache_ttl = 3600; // 1 hour
 	
 	/* ------------------------------------------------------------------------------------------ */
 	
