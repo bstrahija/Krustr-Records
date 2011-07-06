@@ -12,7 +12,7 @@
 			</ul>
 		
 		<?php elseif (logged_in()) : ?>
-			<img src="<?php echo (@$profile->avatar) ? @$profile->avatar : site_url('system/assets/images/avatar_dummy.png'); ?>" width="50" class="profile-image" alt="Profile image">
+			<img src="<?php echo (@$profile->avatar) ? @site_url($profile->avatar) : site_url('system/assets/images/avatar_dummy.png'); ?>" width="50" class="profile-image" alt="Profile image">
 			<ul class="login">
 				<li><?php echo anchor('profile', user_display_name()); ?></li>
 				<li><a class="logout" href="<?=site_url('logout')?>">Logout</a></li>
@@ -20,8 +20,15 @@
 			
 		<?php else : ?>
 			
-			<?php echo form_open(current_url()); ?>
-				<?php echo form_hidden('action', 'login'); ?>
+			<?php echo form_open(current_url(), null, array('action'=>'login')); ?>
+				<?php
+					if ($this->input->post('action') == 'login' && validation_errors())
+					{
+						echo '<div class="errors">'.validation_errors().'</div>';
+					} // end if
+					
+					Notice::display('front');
+				?>
 				<ul>
 					<li><?php echo form_label('Email', 'inp-email'); ?>
 						<?php echo form_input('email', NULL, 'id="inp-email"'); ?></li>

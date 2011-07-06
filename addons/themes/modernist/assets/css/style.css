@@ -12,6 +12,11 @@ h2 { margin: 0 0 5px 0; font-size: 28px; font-weight: normal; color: #21759B; }
 #wrap { width: 878px; margin: 0 auto; margin-top: 80px; margin-bottom: 40px; height: 1%; }
 #wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 #main { width: 530px; padding: 15px 0; float: left; }
+#main .errors   { background: #f4ddd9; border: 1px solid #c5533a; color: #333; text-shadow: 0 1px 0 #fff; padding: 10px 15px; margin: 0 0 20px; .border-radius(5px); }
+#main .errors p { margin: 0 !important; }
+#main .notice   { background: #d5fedb; border: 1px solid #62fa79; color: #333; text-shadow: 0 1px 0 #fff; padding: 10px 15px; margin: 0 0 20px; .border-radius(5px); }
+#main .notice p { margin: 0 !important; }
+
 
 /* !/===> Header */
 header { height: 1%; clear: both; position: relative; }

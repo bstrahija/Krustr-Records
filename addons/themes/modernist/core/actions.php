@@ -52,15 +52,16 @@ class Theme_actions extends KR_Actions {
 		$this->form_validation->set_rules('email', 		'Email', 	'xss_clean|trim|required|valid_email');
 		$this->form_validation->set_rules('password', 	'Password', 'xss_clean|trim|required');
 		
-		if ($this->form_validation->run()) {
-			if ($this->vault->log_in($this->input->post('email'), $this->input->post('password'))) {
+		if ($this->form_validation->run())
+		{
+			if (Auth::log_in($this->input->post('email'), $this->input->post('password')))
+			{
 				redirect(make_http(site_url()));
 			}
 			else {
 				$this->form_validation->set_error('Kriva zaporka.');
-				
-			} // end if
-		} // end if
+			}
+		}
 		
 	} //end login()
 	
@@ -72,7 +73,7 @@ class Theme_actions extends KR_Actions {
 	 */
 	public function logout()
 	{
-		$this->vault->log_out();
+		Auth::log_out();
 		redirect();
 		
 	} // end logout()
