@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php partial('header'); ?>
 
 <section class="articles">
 	<?php if ($entries) : foreach ($entries as $entry) : ?>
@@ -31,4 +31,4 @@
 </section>
 <!-- /#main -->
 
-<?php get_footer(); ?>
+<?php partial('footer'); ?>

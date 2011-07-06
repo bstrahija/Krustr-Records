@@ -4,7 +4,7 @@
 		<?php if (fb_logged_in()) : ?>
 			<img src="<?php echo fb_picture(); ?>" class="profile-image" alt="Profile image" width="50" />
 			<ul class="login">
-				<li><?php echo cms_anchor('profile', fb_name($this->facebook->user())); ?></li>
+				<li><?php echo anchor('profile', fb_name($this->facebook->user())); ?></li>
 				<?php if (logged_in()) : ?>
 				<li><?php echo anchor('link_with_facebook', 'Merge with FaceBook account'); ?></li>
 				<?php endif; ?>
@@ -12,9 +12,9 @@
 			</ul>
 		
 		<?php elseif (logged_in()) : ?>
-			<img src="<?php echo user_avatar(); ?>" class="profile-image" alt="Profile image" width="50" />
+			<img src="<?php echo (@$profile->avatar) ? @$profile->avatar : site_url('system/assets/images/avatar_dummy.png'); ?>" width="50" class="profile-image" alt="Profile image">
 			<ul class="login">
-				<li><?php echo cms_anchor('profile', $this->auth->get_display_name()); ?></li>
+				<li><?php echo anchor('profile', user_display_name()); ?></li>
 				<li><a class="logout" href="<?=site_url('logout')?>">Logout</a></li>
 			</ul>
 			
@@ -34,8 +34,8 @@
 		<?php endif;?>
 		
 		
-		<?php if ( ! fb_logged_in()) : ?>
-			<div class="login clearfix"><?php echo fb_login_button('medium', 'Facebook Login'); ?></div>
+		<?php if ( ! fb_logged_in() and ! logged_in()) : ?>
+			<div class="login clearfix"><?php echo fb_login_button('Facebook Login'); ?></div>
 			<p>Or you can login simply with your Facebook account.</p>
 		<?php endif; ?>
 	</section>

@@ -398,6 +398,36 @@ class Publisher extends CMS {
 	/**
 	 *
 	 */
+	function get_in_channel($channel = 'pages', $lang = null)
+	{
+		if ($channel)
+		{
+			// Get language
+			if ( ! $lang) $lang = SITE_LANG;
+			
+			// The table
+			$table = 'ch_'.$lang.'_'.str_replace("-", "_", $channel);
+			
+			// Get the entries
+			$this->db->from($table.' AS e')
+			         ->where('published_at <', now())
+			         ->order_by('published_at', 'DESC')
+			         ;
+			$entries = $this->db->get()->result();
+			
+			return $entries;
+		}
+		
+		return null;
+		
+	} // get_in_channel()
+	
+	
+	/* ------------------------------------------------------------------------------------------ */
+	
+	/**
+	 *
+	 */
 	public function get_many_by_category($channel = 'pages', $categories = null, $lang = null, $explicit = false)
 	{
 		return $this->get_by_category($channel, $categories, $lang, $explicit, true);

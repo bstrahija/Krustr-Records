@@ -929,8 +929,8 @@ class Content_admin extends Backend {
 				// Images
 				elseif ($field->type == 'image')
 				{
-					$img_title       = $this->input->post('image-14-title');
-					$img_description = $this->input->post('image-14-description');
+					$img_title       = $this->input->post('image-'.$field->id.'-title');
+					$img_description = $this->input->post('image-'.$field->id.'-description');
 					
 					// Save it to the database
 					$this->field_content_m->update_by(
@@ -941,6 +941,7 @@ class Content_admin extends Backend {
 						array(
 							'title'       => $img_title,
 							'description' => $img_description,
+							'lang'        => LANG,
 						)
 					);
 				}

@@ -18,7 +18,13 @@ class Theme_actions extends KR_Actions {
 	public function __construct()
 	{
 		// Load resources
-		$this->load->library('form_validation');
+		$this->load->library('form_validation', array('CI' => $this));
+		$this->load->library('mailing/mailer');
+		
+		// Facebook
+		$this->benchmark->mark('Facebook_connect_start');
+		$this->_facebook_connect();
+		$this->benchmark->mark('Facebook_connect_end');
 		
 		// Now lets route the actions
 		if ($this->input->post('action') == "login") :
@@ -70,6 +76,52 @@ class Theme_actions extends KR_Actions {
 		redirect();
 		
 	} // end logout()
+	
+	
+	/* ------------------------------------------------------------------------------------------ */
+	
+	
+	
+	
+	/* !------------------------------------------------------------------------------------------ */
+	/* !✰ Facebook */
+	/* !------------------------------------------------------------------------------------------ */
+	
+	
+	/**
+	 *
+	 */
+	private function _facebook_connect()
+	{
+		$this->load->model('fb/facebook_m');
+		
+		//dump( $this->facebook_m->get_user() );
+		
+		
+		/*$this->config->load('fb/facebook');
+		
+		$this->load->library('fb/facebook', array(
+			'appId'  => config_item('facebook_app_id'),
+			'secret' => config_item('facebook_api_secret'),
+			'cookie' => true,
+		));
+		$this->load->helper('fb/facebook');
+		
+		$session = $this->facebook->getSession();
+
+		$me = null;
+		
+		try {
+		    $uid = $this->facebook->getUser();
+		    $me = $this->facebook->api('/me');
+		  } catch (FacebookApiException $e) {
+		    error_log($e);
+		  }
+		
+		/*dump($uid);
+		dump($me);*/
+		
+	} // end facebook_connect()
 	
 	
 	/* ------------------------------------------------------------------------------------------ */

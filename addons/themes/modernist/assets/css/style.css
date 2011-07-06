@@ -1,4 +1,4 @@
-body { font-family: Palatino, Georgia, "Times New Roman", serif; background: transparent url(../images/bg.gif) repeat top left; color: #444; }
+body { font-family: Palatino, Georgia, "Times New Roman", serif; background: transparent url(../img/bg.gif) repeat top left; color: #444; }
 hr { display: none; }
 img { vertical-align: middle; border: 0; }
 p { margin: 0 0 20px 0; font-size: 14px; line-height: 140%; }
@@ -23,13 +23,13 @@ header { height: 1%; clear: both; position: relative; }
 	
 
 /* !/===> Foooter */
-footer { padding: 10px 0; background: transparent url(../images/l.gif) no-repeat top left; clear: both; }
+footer { padding: 10px 0; background: transparent url(../img/l.gif) no-repeat top left; clear: both; }
 footer p { font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; font-size: 11px; line-height: 140%; color: #777; }
 footer p em { padding: 0 4px; }
 
 
 /* !/===> Navigation */
-header nav { margin: 0 0 35px 3px; padding: 15px 0 0 0; background: transparent url(../images/l.gif) no-repeat left top; height: 1%; clear: both; }
+header nav { margin: 0 0 35px 3px; padding: 15px 0 0 0; background: transparent url(../img/l.gif) no-repeat left top; height: 1%; clear: both; }
 	header nav:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 	header nav ul { list-style-type: none; margin: 0; padding: 0; }
 	header nav li { margin-right: 25px; font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; font-size: 11px; line-height: 140%; float: left; }
@@ -84,7 +84,7 @@ article { margin: 0 0 100px 0; }
 		article ol.form input[type=text], article ol.form textarea { padding: 6px; font-family: Palatino, Georgia, "Times New Roman", serif; font-size: 13px; border-left: 1px solid #999; 
 			border-top: 1px solid #999; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #444; }
 		input.btn { width: auto; padding: 6px 10px; font-family: Georgia, "Times New Roman", serif; font-size: 13px; font-weight: bold; 
-			background: transparent url(../images/bg-button.png) repeat-x 0 50%; background-color: #21759B; border: 0 none; color: #fff; cursor: pointer;
+			background: transparent url(../img/bg-button.png) repeat-x 0 50%; background-color: #21759B; border: 0 none; color: #fff; cursor: pointer;
 			border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -webkit-transition: all .2s linear; }
 		input.btn:hover { background-color: #1F536C; text-decoration: none; }
 	
@@ -96,13 +96,13 @@ article { margin: 0 0 100px 0; }
 
 
 /* !/===> Article meta */
-article section.meta { padding: 10px 0 0 0; background: url(../images/l.gif) no-repeat scroll left top transparent; clear: both; }
+article section.meta { padding: 10px 0 0 0; background: url(../img/l.gif) no-repeat scroll left top transparent; clear: both; }
 	article section.meta ul { list-style-type: none; }
 	article section.meta li { font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; font-size: 11px; line-height: 140%; color: #777; }
 
 
 /* !/===> Video box */
-article section.video { margin: 30px 0; padding: 10px 0 0 0; background: url(../images/l.gif) no-repeat scroll left top transparent; clear: both; }
+article section.video { margin: 30px 0; padding: 10px 0 0 0; background: url(../img/l.gif) no-repeat scroll left top transparent; clear: both; }
 	article section.video h3 { margin-top: 0; margin-bottom: 16px; }
 	article section.video .video-container { width: 530px; overflow: hidden; }
 
@@ -114,7 +114,7 @@ article section.mixed { width: 100%; overflow: hidden; }
 
 
 /* !/===> Related entries */
-article section.related { margin: 30px 0; padding: 10px 0 0 0; background: url(../images/l.gif) no-repeat scroll left top transparent; clear: both; }
+article section.related { margin: 30px 0; padding: 10px 0 0 0; background: url(../img/l.gif) no-repeat scroll left top transparent; clear: both; }
 	article section.related h3 { margin-top: 0; margin-bottom: 16px; }
 		article section.related ol { border-top: 1px dotted #ccc; padding-top: 12px; }
 		article section.related li { list-style-type: decimal; border-bottom: 1px dotted #ccc; margin: 0 0 12px 0; padding-left: 10px; }
@@ -133,7 +133,7 @@ article section.gallery { margin: 0 0 30px 0; }
 
 
 /* !/===> Article navigation */
-nav.entries { margin: 0 0 40px 0; padding: 10px 0 0 0; background: transparent url(../images/l.gif) no-repeat left top; clear: both; height: 1%; }
+nav.entries { margin: 0 0 40px 0; padding: 10px 0 0 0; background: transparent url(../img/l.gif) no-repeat left top; clear: both; height: 1%; }
 	nav.entries:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 	nav.entries ul { list-style-type: none; }
 	nav.entries li { margin-right: 25px; font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; font-size: 11px; line-height: 140%; color: #777; float: left; }
@@ -147,7 +147,7 @@ aside { width: 250px; padding: 15px 20px; float: right; color: #777777; }
 	aside p { font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; font-size: 11px; line-height: 140%; }
 	aside ul { list-style-type: none; }
 	aside li { margin: 0 0 4px 0; font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; font-size: 11px; line-height: 140%; }
-	aside section { margin: 0 0 40px 0; padding: 15px 0; background: transparent url(../images/l.gif) no-repeat top left; }
+	aside section { margin: 0 0 40px 0; padding: 15px 0; background: transparent url(../img/l.gif) no-repeat top left; }
 	
 	/* Social login */
 	aside .social { width: 100%; overflow: hidden; }

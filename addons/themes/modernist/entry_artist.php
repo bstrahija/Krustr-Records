@@ -1,20 +1,32 @@
-<?php get_header(); ?>
+<?php partial('header'); ?>
 
 <article>
+	{{#content.entry}}
 	<header>
-		<h2><?php echo title(); ?></h2>
+		<h2>{{title}}</h2>
 	</header>
 	
 	
 	<section class="mixed clearfix">
-		<?php if (field('thumb')) : ?>
-			<div class="artist-art"><img src="<?php echo image_thumb(field('thumb'), 200, 200); ?>" alt="" width="200" /></div>
-		<?php endif; ?>
-		<?php echo content(); ?>
+		{{#f_thumb}}
+			<div class="artist-art"><img src="{{*f_thumb action='thumb' width='200' height='200'}}" alt="" width="200" /></div>
+		{{/f_thumb}}
+		
+		{{{body}}}
 	</section>
 	
 	
-	<?php if (@$entry->fields['video']) : ?>
+	<?php if (isset($content->entry->f_video) and $content->entry->f_video) : ?>
+		<section class="video">
+			<h3>Video</h3>
+			<div class="video-container">
+				<a class="youtube" href="<?php echo $content->entry->f_video; ?>" target="_blank"><img src="<?php echo $this->video_embed->get_video_thumb($content->entry->f_video); ?>" width="193" alt=""></a>
+			</div>
+		</section>
+	<?php endif; ?>
+	
+	
+	<?php /*if (@$entry->fields['video']) : ?>
 	<section class="video">
 		<h3>Video</h3>
 		<div class="video-container">
@@ -22,12 +34,12 @@
 			<?php echo show_video($video, 530, 380); ?>
 		</div>
 	</section>
-	<?php endif; ?>
+	<?php endif;*/ ?>
 	
 	
 	<?php
 		// Get related albums
-		$albums = related($entry, 'albums', array('get_fields'=>TRUE));
+		/*$albums = related($entry, 'albums', array('get_fields'=>TRUE));
 	?>
 	<?php if ($albums) : ?>
 	<section class="related">
@@ -51,10 +63,10 @@
 			<?php endforeach; ?>
 		</ol>
 	</section>
-	<?php endif; ?>
+	<?php endif;*/ ?>
 	
 	
-	<section class="meta">
+	<? /*<section class="meta">
 		<ul>
 			<li>
 				<a href="<?php echo get_permalink(); ?>#add-comment">Leave your comment</a>
@@ -69,7 +81,10 @@
 			</li>
 			<li><a href="#">Edit this post</a></li>
 		</ul>
-	</section>
+	</section> */ ?>
+	
+	
+	{{/content.entry}}
 </article>
 
-<?php get_footer(); ?>
+<?php partial('footer'); ?>

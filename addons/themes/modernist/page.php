@@ -1,8 +1,10 @@
-<?php get_header(); ?>
+<?php partial('header'); ?>
 
 <article>
-	<h2><?php echo title(); ?></h2>
-	<?php echo content(); ?>
+	{{#page}}
+		<h2>{{title}}</h2>
+		{{{body}}}
+	{{/page}}
 </article>
 
-<?php get_footer(); ?>
+<?php partial('footer'); ?>

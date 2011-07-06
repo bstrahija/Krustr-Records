@@ -1,0 +1,151 @@
+/*
+**
+**  BootstrapLESS
+**  A bare-bones LESS helper file for DRY CSS coding
+**
+*****************************************************************/
+
+
+/*
+**  FONT STACKS
+*******************************************/
+
+/* sans-serif font */
+.sans-serif(@weight: normal, @size: 14px, @lineheight: 20px) {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineheight;
+}
+
+/* serif font */
+.serif(@weight: normal, @size: 14px, @lineheight: 20px) {
+  font-family: "Georgia", Times, sans-serif;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineheight;
+}
+
+/* monospace font */
+.monospace(@weight: normal, @size: 12px, @lineheight: 20px) {
+  font-family: "Monaco", Courier New, monospace;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineheight;
+}
+
+
+/*
+**  CLEARFIX (for clearing floats)
+*******************************************/
+.cf {
+  zoom: 1;
+	&:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: ".";
+	}
+}
+
+  
+/*
+**  ROUNDED CORNERS
+*******************************************/
+
+/* all corners */
+.border-radius(@radius: 5px) {
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+/* top corners */
+.border-radius-top(@radius: 5px){
+  -moz-border-radius-topleft: @radius;
+  -moz-border-radius-topright: @radius;
+  border-top-left-radius: @radius;
+  border-top-right-radius: @radius;
+}
+
+/* right corners */
+.border-radius-right(@radius: 5px){
+  -moz-border-radius-topright: @radius;
+  -moz-border-radius-bottomright: @radius;
+  border-top-right-radius: @radius;
+  border-bottom-right-radius: @radius;
+}
+
+/* bottom corners */
+.border-radius-bottom(@radius: 5px){
+  -moz-border-radius-bottomleft: @radius;
+  -moz-border-radius-bottomright: @radius;
+  border-bottom-left-radius: @radius;
+  border-bottom-right-radius: @radius;
+}
+
+/* left corners */
+.border-radius-right(@radius: 5px){
+  -moz-border-radius-topleft: @radius;
+  -moz-border-radius-bottomleft: @radius;
+  border-top-left-radius: @radius;
+  border-bottom-left-radius: @radius;
+}
+
+
+/*
+**  SHADOWS
+*******************************************/
+
+/* box shadow */
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+/* text shadow */
+.text-shadow(@shadow: 1px 1px 2px rgba(0,0,0,.25)) {
+  text-shadow: @shadow;
+}
+
+
+/*
+**  TRANSITIONS (CSS3 transitions)
+*******************************************/
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	transition: @transition;
+}
+
+
+/*
+**  GRADIENTS
+*******************************************/
+
+/* horizontal */
+.gradient-horizontal(@startColor: #555; @endColor: #333) {
+  background-color: @endColor;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+  background-image: -webkit-linear-gradient(right center, @startColor, @endColor);
+  background-image: -moz-linear-gradient(right center, @startColor, @endColor);
+  background-image: -o-linear-gradient(left,  @startColor,  @endColor);
+  background-image: -khtml-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+  filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr=")@start e(",endColorstr=")@EnD e(",GradientType=1)");
+  -ms-filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr=")@start e(",endColorstr=")@EnD e(",GradientType=1)");
+}
+
+/* vertical */
+.gradient(@startColor: #555; @endColor: #333) {
+  background-color: @endColor;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background-image: -webkit-linear-gradient(@startColor, @endColor);
+  background-image: -moz-linear-gradient(@startColor, @endColor);
+  background-image: -o-linear-gradient(top,  @startColor,  @endColor);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr=")@start e(",endColorstr=")@EnD e(",GradientType=0)");
+  -ms-filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr=")@start e(",endColorstr=")@EnD e(",GradientType=0)");
+}

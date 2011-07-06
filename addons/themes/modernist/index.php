@@ -1,13 +1,11 @@
 <?php partial('header'); ?>
 
 <article>
-	<?php /*
-		// Get home page entry
-		$entry = get_entry('welcome');
-	?>
+	{{#content.welcome}}
+		<h2>{{title}}</h2>
+		{{{body}}}
+	{{/content.welcome}}
 	
-	<h2><?php echo title($entry); ?></h2>
-	<?php echo content($entry);*/ ?>
 </article>
 
 <!-- <nav class="entries">
